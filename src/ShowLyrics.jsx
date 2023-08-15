@@ -3,10 +3,10 @@ import { useParams } from "react-router-dom/cjs/react-router-dom"
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 const ShowLyrics = () => {
     const {id} = useParams()
-    const { error, preloader, lyricsData } = useFetch(`http://localhost:8080/lyricsData/${id}`)
+    const { error, preloader, lyricsData } = useFetch(`https://lyricsdata.onrender.com/lyricsData/${id}`)
     const history = useHistory()
     const handleDelete = () => {
-        fetch(`http://localhost:8080/lyricsData/${id}`, {
+        fetch(`https://lyricsdata.onrender.com/lyricsData/${id}`, {
             method: 'DELETE'
         })
         .then(() => {

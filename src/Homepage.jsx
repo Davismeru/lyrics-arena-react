@@ -2,7 +2,7 @@ import RenderPosts from "./RenderPosts";
 import useFetch from "./useFetch";
 
 const Homepage = () => { 
-    const {error, preloader, lyricsData: postsData} = useFetch('http://localhost:8080/lyricsData')
+    const {error, preloader, lyricsData: postsData} = useFetch('https://lyricsdata.onrender.com/lyricsData')
     return ( 
         <main>
             {error && <h1>{error}</h1>}

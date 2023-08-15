@@ -13,7 +13,7 @@ const Create = () => {
         setIsPending(true)
         const newLyrics = {title, lyrics, label}
         console.log(newLyrics);
-        fetch('http://localhost:8080/lyricsData', {
+        fetch('https://lyricsdata.onrender.com/lyricsData', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newLyrics)
