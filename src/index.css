@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right bottom, #222, #36055e93);
+  min-height: 100vh;
+}
+
+.App {
+  width: 70%;
+  margin: 0 auto;
+  
+}
+
+:root {
+  --mainColor: #232323;
+  --mainColor1: #36cca2;
+  --mainColor2: #07573f;
+}
+
+/* navbar */
+
+nav span {
+  margin: 0 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgrey;
+  padding: 25px 0;
+  color: #fff;
+}
+
+nav a {
+  margin: 0 25px;
+  text-decoration: none;
+  font-weight: 900;
+  color: var(--main);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+/* homepeage */
+.title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.title {
+  color: #fff;
+}
+
+.profile {
+  display: flex;
+  border-radius: 5px;
+  background: #fff;
+  padding: 5px;
+}
+
+.profile i {
+  margin: 0 5px;
+}
+
+.newBlogBtn {
+  background: var(--mainColor);
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  flex: 2;
+  text-align: center;
+  border-radius: inherit;
+  border: none;
+}
+
+.newBlogBtn {
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.post {
+  display: flex;
+  background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 3px #222;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.post-preview {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  flex: 2;
+}
+
+.post-image {
+  height: 200px;
+  width: 300px;
+  background: black;
+  border-radius: inherit;
+  overflow: hidden;
+  flex: 1;
+  padding: 1px;
+  background-color: #ffffff8c;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.post-link {
+  text-decoration: none;
+  color: #271c1c;
+}
+
+.post:hover {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+  color: #fff;
+}
+
+.post-title {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 900;
+
+}
+
+.read-more {
+  margin-top: 5px;
+  text-decoration: none;
+  color: var(--mainColor);
+}
+
+.label {
+  width: 100px;
+  height: 20px;
+  border-top-left-radius: inherit;
+  background-color: var(--mainColor);
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 2px;
+  font-weight: 600;
+}
+
+/* lyrics Details */
+.lyrics-area {
+  background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.lyrics-area p {
+  width: 20%;
+  margin: 0 auto;
+} 
+
+/* Create */
+.form {
+  background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: #222;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form select, form textarea, button {
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 3px #222;
+  font-size: 16px;
+  color: grey;
+}
+
+form input, form select, form textarea, form textarea, form option {
+  background: #ffffff57;
+  color: #222;
+}
+
+form label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+select {
+  outline: none;
+}
+
+textarea {
+  height: 200px;
+  outline: none;
+}
+
+form button, .lyrics-area button {
+  width: 100px;
+  align-self: center;
+  margin-top: 20px;
+  background: var(--mainColor);
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .post {
+    flex-direction: column;
+  }
+
+  .post-image {
+    width: 100%;
+    height: 100px;
+  }
+
+  .lyrics-area p {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .App {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .lyrics-area p {
+    width: 60%;
+  }
+
+  .lyrics-area p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .newBlogBtn {
+    margin: 20px 0;
+  }
+}
